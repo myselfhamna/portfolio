@@ -1,0 +1,94 @@
+@import "tailwindcss";
+
+@theme {
+  /* Font family */
+  --font-family-sans: 'Inter', system-ui, sans-serif;
+
+  /* New Color Palette - Modern Gen Z */
+  /* Backgrounds */
+  --color-black: #000000;
+  --color-navy: #14213d;
+  --color-navy-light: #1e2e4d;
+  --color-orange-dark: #e0900f;
+
+  /* Accent */
+  --color-orange: #fca311;
+
+  /* Text colors */
+  --color-gray-100: #ffffff;
+  --color-gray-200: #e5e5e5;
+  --color-gray-300: #d1d5db;
+  --color-gray-400: #9ca3af;
+
+  /* Keep some utility colors */
+  --color-dark: #1a1a1a;
+  --color-dark-lighter: #2a2a2a;
+}
+
+@layer base {
+  body {
+    @apply bg-black text-gray-100 antialiased;
+    scroll-behavior: smooth;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .glass-card {
+    background: linear-gradient(135deg, rgba(20, 33, 61, 0.2) 0%, rgba(0, 0, 0, 0.3) 100%);
+    backdrop-filter: blur(16px);
+    border: 1px solid rgba(252, 163, 17, 0.15);
+    border-radius: 1rem;
+  }
+
+  .glass-card-hover {
+    transition: all 0.3s;
+  }
+
+  .glass-card-hover:hover {
+    border-color: rgba(252, 163, 17, 0.4);
+    box-shadow: 0 25px 50px -12px rgba(252, 163, 17, 0.15);
+  }
+
+  .text-gradient {
+    background: linear-gradient(135deg, rgb(252, 163, 17), rgb(20, 33, 61));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .text-gradient-orange {
+    background: linear-gradient(135deg, rgb(252, 163, 17), rgb(255, 255, 255));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .section-title {
+    font-size: 2.25rem;
+    font-weight: 700;
+    line-height: 2.5rem;
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, rgb(252, 163, 17), rgb(20, 33, 61));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  @media (min-width: 768px) {
+    .section-title {
+      font-size: 3rem;
+      line-height: 1;
+    }
+  }
+
+  .section-subtitle {
+    font-size: 1.125rem;
+    color: rgb(229, 229, 229);
+    margin-bottom: 3rem;
+    max-width: 42rem;
+  }
+}
