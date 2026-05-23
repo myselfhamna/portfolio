@@ -7,7 +7,7 @@ export const personalInfo = {
   linkedin: "https://www.linkedin.com/in/hamna-javed-648767321",
   github: "https://github.com/myselfhamna",
   socials: [
-    { name: "GitHub", url: "https://github.com/myselfhamna" },
+    { name: "GitHub", url: "https://github.com/myselfhamna", icon: "Github" },
     { name: "LinkedIn", url: "https://www.linkedin.com/in/hamna-javed-648767321", icon: "Linkedin" },
     { name: "Email", url: "mailto:hamnajaved351@gmail.com", icon: "Mail" },
   ],
